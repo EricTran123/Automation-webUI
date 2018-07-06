@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="D:/Automation/webUI"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="2.458">
+  <properties />
+  
+  
+            <testcase name="testLoginandout" time="2.458" classname="testScripts.Loginandout" />
+      
+</testsuite>

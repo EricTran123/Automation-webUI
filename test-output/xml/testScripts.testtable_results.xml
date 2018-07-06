@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="D:/Automation/webUI"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="39.478">
+  <properties />
+  
+  
+            <testcase name="testTable" time="39.478" classname="testScripts.testtable" />
+      
+</testsuite>

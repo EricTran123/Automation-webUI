@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="D:/Automation/webUI"
+           tests="1"
+           failures="1"
+           errors="0"
+           skipped="0"
+           time="2.857">
+  <properties />
+            <testcase name="testBrowser" time="2.857" classname="Util.BrowserEngine">
+                <failure type="org.openqa.selenium.remote.UnreachableBrowserException"
+                  message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;DESKTOP-BE70S9D&apos;, ip: &apos;192.168.110.23&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_152&apos;
+Driver info: driver.version: InternetExplorerDriver"
+              >
+<![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-BE70S9D', ip: '192.168.110.23', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_152'
+Driver info: driver.version: InternetExplorerDriver
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:564)
+  org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+  org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:223)
+  org.openqa.selenium.ie.InternetExplorerDriver.<init>(InternetExplorerDriver.java:215)
+  org.openqa.selenium.ie.InternetExplorerDriver.<init>(InternetExplorerDriver.java:152)
+  Util.BrowserEngine.initBrowser(BrowserEngine.java:29)
+  Util.BrowserEngine.openBrowser(BrowserEngine.java:60)
+  Util.BrowserEngine.testBrowser(BrowserEngine.java:195)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+  org.testng.TestRunner.privateRun(TestRunner.java:648)
+  org.testng.TestRunner.run(TestRunner.java:505)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+  org.testng.SuiteRunner.run(SuiteRunner.java:364)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+  org.testng.TestNG.runSuites(TestNG.java:1049)
+  org.testng.TestNG.run(TestNG.java:1017)
+  org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+  org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+Caused by: java.lang.IllegalArgumentException: No enum constant org.openqa.selenium.Proxy.ProxyType.
+  java.lang.Enum.valueOf(Enum.java:238)
+  org.openqa.selenium.Proxy$ProxyType.valueOf(Proxy.java:33)
+  org.openqa.selenium.Proxy.<init>(Proxy.java:67)
+  org.openqa.selenium.remote.ProtocolHandshake$Result.lambda$static$0(ProtocolHandshake.java:148)
+  org.openqa.selenium.remote.ProtocolHandshake$Result.<init>(ProtocolHandshake.java:162)
+  org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$new$1(JsonWireProtocolResponse.java:85)
+  org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$getResponseFunction$2(JsonWireProtocolResponse.java:93)
+  org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+  java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+  java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+  java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+  java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+  java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+  java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+  java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+  java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+  java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+  org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+  org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+  org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+  org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+  org.openqa.selenium.ie.InternetExplorerDriver.run(InternetExplorerDriver.java:223)
+  org.openqa.selenium.ie.InternetExplorerDriver.<init>(InternetExplorerDriver.java:215)
+  org.openqa.selenium.ie.InternetExplorerDriver.<init>(InternetExplorerDriver.java:152)
+  Util.BrowserEngine.initBrowser(BrowserEngine.java:29)
+  Util.BrowserEngine.openBrowser(BrowserEngine.java:60)
+  Util.BrowserEngine.testBrowser(BrowserEngine.java:195)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+  org.testng.TestRunner.privateRun(TestRunner.java:648)
+  org.testng.TestRunner.run(TestRunner.java:505)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+  org.testng.SuiteRunner.run(SuiteRunner.java:364)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+  org.testng.TestNG.runSuites(TestNG.java:1049)
+  org.testng.TestNG.run(TestNG.java:1017)
+  org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+  org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:123)
+]]>
+      </failure>
+
+          </testcase>
+  
+  
+  
+</testsuite>
