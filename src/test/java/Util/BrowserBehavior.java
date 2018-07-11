@@ -8,15 +8,15 @@ import org.openqa.selenium.WebDriver;
 public class BrowserBehavior {
     public WebDriver driver;
     /**关闭浏览器*/
-    public void closeCurrentBrowser() {
+    public static void closeCurrentBrowser(WebDriver driver) {
         driver.close();
     }
     /**关闭所有浏览器*/
-    public void closeAllBrowser() {
+    public static void closeAllBrowser(WebDriver driver) {
         driver.quit();
     }
     /**最大化浏览器*/
-    public void maxBrowser() {
+    public static void maxBrowser(WebDriver driver) {
         driver.manage().window().maximize();
     }
     /**自定义浏览器尺寸*/
@@ -24,7 +24,7 @@ public class BrowserBehavior {
         driver.manage().window().setSize(new Dimension(width, height));
     }
     /**获取当前URL*/
-    public String getURL() {
+    public static String getURL(WebDriver driver) {
         return driver.getCurrentUrl();
     }
     /**获取当前浏览器页面的标题*/

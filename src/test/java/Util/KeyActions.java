@@ -19,7 +19,7 @@ public class KeyActions {
     private static ObjectMap objectMap = new ObjectMap("D:\\Automation\\webUI\\src\\test\\java\\propertyFiles\\ObjectMap.properties");
     static {
         //指定log4j配置文件为log4j.xml
-        DOMConfigurator.configure("log4j.properties");
+        DOMConfigurator.configure("log4j.xml");
         }
     //定义函数initBrowser，并返回驱动
     public static WebDriver initBrowser(String Browser) {
@@ -78,7 +78,7 @@ public class KeyActions {
         }
     }
     //断言文字内容
-    public static void assert_String(String assertstring){
+    public static void assert_String(WebDriver driver,String assertstring){
         try{
             Assert.assertTrue(driver.getPageSource().contains(assertstring));
         }catch (AssertionError e){
@@ -86,7 +86,7 @@ public class KeyActions {
         }
     }
     //关闭浏览器
-    public static void close_Browser(){
+    public static void close_Browser(WebDriver driver){
         try{
             System.out.println("关闭浏览器");
             driver.quit();
