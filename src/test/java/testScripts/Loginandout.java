@@ -9,14 +9,10 @@ import static Util.KeyActions.*;
 
 
 public class Loginandout {
-    private WebDriver driver;
+    private WebDriver driver = BrowserEngine.initBrowser("chrome");
     static {
         //指定log4j配置文件为log4j.xml
         DOMConfigurator.configure("log4j.xml");
-    }
-    @BeforeMethod
-    public void setUp() {
-        driver = BrowserEngine.initBrowser("chrome");
     }
     @Test
     public void testLoginandout() throws Exception {
