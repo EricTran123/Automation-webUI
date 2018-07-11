@@ -19,7 +19,7 @@ public class KeyActions {
     private static ObjectMap objectMap = new ObjectMap("D:\\Automation\\webUI\\src\\test\\java\\propertyFiles\\ObjectMap.properties");
     static {
         //指定log4j配置文件为log4j.xml
-        DOMConfigurator.configure("log4j.xml");
+        DOMConfigurator.configure("log4j.properties");
         }
     //定义函数initBrowser，并返回驱动
     public static WebDriver initBrowser(String Browser) {
@@ -30,9 +30,11 @@ public class KeyActions {
         }else if (Browser.equalsIgnoreCase("ie")){
             System.setProperty("webdriver.ie.driver","C:\\Program Files\\Internet Explorer\\IEDriverServer.exe");
             driver = new InternetExplorerDriver();
+            Log.info("启动IE浏览器");
         }else {
             System.setProperty("webdriver.gecko.driver", "C:\\Program Files\\Mozilla Firefox\\geckodriver.exe");
             driver = new FirefoxDriver();
+            Log.info("启动Firefox浏览器");
         }
         return driver;
     }
