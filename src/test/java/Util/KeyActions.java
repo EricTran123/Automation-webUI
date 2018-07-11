@@ -26,6 +26,7 @@ public class KeyActions {
         if(Browser.equalsIgnoreCase("chrome")) {
             System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
             driver = new ChromeDriver();
+            Log.info("启动Chrome浏览器");
         }else if (Browser.equalsIgnoreCase("ie")){
             System.setProperty("webdriver.ie.driver","C:\\Program Files\\Internet Explorer\\IEDriverServer.exe");
             driver = new InternetExplorerDriver();
@@ -38,6 +39,7 @@ public class KeyActions {
     //定义函数navigate，用于获取浏览器要访问的链接
     public static void navigate(String url){
         driver.get(url);
+        Log.info("访问地址为"+url);
     }
     //用于显示等待页面元素的出现
     public static void waitFor_Element(String xpathExpression){
