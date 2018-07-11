@@ -9,7 +9,6 @@ import static Util.KeyActions.*;
 
 
 public class Loginandout {
-    private BrowserEngine browser = new BrowserEngine();
     private WebDriver driver;
     static {
         //指定log4j配置文件为log4j.xml
