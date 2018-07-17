@@ -45,10 +45,12 @@ public class KeyActions {
         Log.info("访问地址为"+url);
     }
     //用于显示等待页面元素的出现
-    public static void waitFor_Element(String ElementNameInproFile){
+    public static void WaitFor_Element(String xpathExpression){
         try{
-            waitWebElementPresence(driver, objectMap.getLocator(ElementNameInproFile));
+            waitWebElementPresence(driver, objectMap.getLocator(xpathExpression));
+            Log.info("显示等待页面元素出现成功， 页面元素是" + xpathExpression);
         }catch (Exception e){
+            Log.info("显示等待页面元素时出现异常，异常信息为：" + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -61,9 +63,9 @@ public class KeyActions {
         }
     }
     //页面上不止一个相同功能并且xpath相同的元素，此种情况处理是将他们存储到List中，然后用索引的方式用其一
-    public static void twoWay(String string){
+    public static void twoWay(String ElementNameInproFile){
         try {
-            List<WebElement> elements = driver.findElements(objectMap.getLocator(string));
+            List<WebElement> elements = driver.findElements(objectMap.getLocator(ElementNameInproFile));
             elements.get(0).click();
             System.out.println("按钮被成功点击");
         }catch (Exception e){
