@@ -23,6 +23,10 @@ public class WaitElementUntil {
         WebDriverWait waitElement = new WebDriverWait(driver, 10);
         waitElement.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpathExpression)));
     }
+    public static void waitWebElementPresence(WebDriver driver, By by){
+        WebDriverWait watiElement = new WebDriverWait(driver, 10);
+        watiElement.until(ExpectedConditions.presenceOfElementLocated(by));
+    }
     /**显示等待页面元素可被点击状态，参数为页面元素xpath定位表达式*/
     public static void waitWebElementToBeClickable(WebDriver driver, String xpathExpression){
         WebDriverWait waitElement = new WebDriverWait(driver, 10);
@@ -42,9 +46,5 @@ public class WaitElementUntil {
     public static void waitWebElementTitleContains(WebDriver driver, String title){
         WebDriverWait waitElement = new WebDriverWait(driver, 10);
         waitElement.until(ExpectedConditions.titleContains(title));
-    }
-    public static void waitWebElementPresence(WebDriver driver, By by){
-        WebDriverWait watiElement = new WebDriverWait(driver, 10);
-        watiElement.until(ExpectedConditions.presenceOfElementLocated(by));
     }
 }
