@@ -1,16 +1,15 @@
 package appModules;
 
-import Util.BrowserBehavior;
+import Util.BrowserEngine;
 import org.openqa.selenium.WebDriver;
 import pageObjects.LoginPage;
 import Util.KeyActions;
-import Util.BrowserBehavior.*;
 
 
 public class LoginandoutAction {
     public static void login(WebDriver driver, String username, String password) throws Exception {
         LoginPage loginPage = new LoginPage(driver);
-        BrowserBehavior.maxBrowser(driver);
+        BrowserEngine.maxBrowser(driver);
         loginPage.userName().sendKeys(username);
         loginPage.password().sendKeys(password);
         loginPage.loginButton().click();

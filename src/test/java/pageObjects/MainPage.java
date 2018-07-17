@@ -5,10 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import static propertyFiles.Constants.Path_ConfigurationFile;
+
 public class MainPage {
     private WebElement element = null;
     //指定页面元素定位表达式配置文件的绝对路径
-    private ObjectMap objectMap = new ObjectMap("D:\\Automation\\webUI\\src\\test\\java\\propertyFiles\\ObjectMap.properties");
+    private ObjectMap objectMap = new ObjectMap(Path_ConfigurationFile);
     private WebDriver driver;
     public MainPage(WebDriver driver){
         this.driver = driver;
@@ -23,9 +25,5 @@ public class MainPage {
     public WebElement personalinfo() throws Exception{
         element = driver.findElement(objectMap.getLocator("paas.personalinfo.userlink"));
         return element;
-    }
-    @Test
-    public void unittestMainPage(){
-
     }
 }

@@ -1,7 +1,8 @@
 package Util;
 import static Util.WaitElementUntil.waitWebElementPresence;
+import static propertyFiles.Constants.Path_BrowserDrivers;
+import static propertyFiles.Constants.Path_ConfigurationFile;
 import java.util.List;
-
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +17,7 @@ public class KeyActions {
     //声明静态的Webdriver对象，用于在此类中相关Driver的操作
     public static WebDriver driver;
     //声明存储定位表达式配置文件的ObjectMap对象
-    private static ObjectMap objectMap = new ObjectMap("D:\\Automation\\webUI\\src\\test\\java\\propertyFiles\\ObjectMap.properties");
+    private static ObjectMap objectMap = new ObjectMap(Path_ConfigurationFile);
     static {
         //指定log4j配置文件为log4j.xml
         DOMConfigurator.configure("log4j.xml");
@@ -24,15 +25,15 @@ public class KeyActions {
     //定义函数initBrowser，并返回驱动
     public static WebDriver initBrowser(String Browser) {
         if(Browser.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver",Path_BrowserDrivers+"chromedriver.exe");
             driver = new ChromeDriver();
             Log.info("启动Chrome浏览器");
         }else if (Browser.equalsIgnoreCase("ie")){
-            System.setProperty("webdriver.ie.driver","C:\\Program Files\\Internet Explorer\\IEDriverServer.exe");
+            System.setProperty("webdriver.ie.driver",Path_BrowserDrivers+"IEDriverServer.exe");
             driver = new InternetExplorerDriver();
             Log.info("启动IE浏览器");
         }else {
-            System.setProperty("webdriver.gecko.driver", "C:\\Program Files\\Mozilla Firefox\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", Path_BrowserDrivers+"geckodriver.exe");
             driver = new FirefoxDriver();
             Log.info("启动Firefox浏览器");
         }
@@ -44,9 +45,9 @@ public class KeyActions {
         Log.info("访问地址为"+url);
     }
     //用于显示等待页面元素的出现
-    public static void waitFor_Element(String xpathExpression){
+    public static void waitFor_Element(String ElementNameInproFile){
         try{
-            waitWebElementPresence(driver, objectMap.getLocator(xpathExpression));
+            waitWebElementPresence(driver, objectMap.getLocator(ElementNameInproFile));
         }catch (Exception e){
             e.printStackTrace();
         }

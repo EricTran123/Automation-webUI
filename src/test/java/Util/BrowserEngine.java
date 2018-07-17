@@ -10,6 +10,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import static propertyFiles.Constants.Path_BrowserDrivers;
+
 public class BrowserEngine {
     private static WebDriver driver = null;
     private static long timeOutInSeconds = 10;
@@ -18,13 +20,13 @@ public class BrowserEngine {
     private static WebDriverWait wait = null;
     public static WebDriver initBrowser(String Browser) {
         if(Browser.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver",Path_BrowserDrivers+"chromedriver.exe");
             driver = new ChromeDriver();
         }else if (Browser.equalsIgnoreCase("ie")){
-            System.setProperty("webdriver.ie.driver","C:\\Program Files\\Internet Explorer\\IEDriverServer.exe");
+            System.setProperty("webdriver.ie.driver",Path_BrowserDrivers+"IEDriverServer.exe");
             driver = new InternetExplorerDriver();
         }else {
-            System.setProperty("webdriver.gecko.driver", "C:\\Program Files\\Mozilla Firefox\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", Path_BrowserDrivers+"geckodriver.exe");
             driver = new FirefoxDriver();
         }
         return driver;
@@ -32,15 +34,15 @@ public class BrowserEngine {
     public WebDriver caseBrowser(String browser) {
         switch (browser) {
             case "ie":
-                System.setProperty("webdriver.ie.driver","C:\\Program Files\\Internet Explorer\\IEDriverServer.exe");
+                System.setProperty("webdriver.ie.driver",Path_BrowserDrivers+"IEDriverServer.exe");
                 driver = new InternetExplorerDriver();
                 break;
             case "firefox":
-                System.setProperty("webdriver.gecko.driver", "C:\\Program Files (x86)\\Mozilla Firefox\\geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", Path_BrowserDrivers+"geckodriver.exe");
                 driver = new FirefoxDriver();
                 break;
             case "chrome":
-                System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver",Path_BrowserDrivers+"chromedriver.exe");
                 driver = new ChromeDriver();
                 break;
             default:
@@ -66,20 +68,8 @@ public class BrowserEngine {
     public static void maxBrowser() {
         driver.manage().window().maximize();
     }
-    public static void setBrowserSize(int width, int height) {
-        driver.manage().window().setSize(new Dimension(width, height));
-    }
     public static String getURL() {
         return driver.getCurrentUrl();
-    }
-    public static String getTitle() {
-        return driver.getTitle();
-    }
-    public static void refreshPage() {
-        driver.navigate().refresh();
-    }
-    public static String getElementText(By locator) {
-        return driver.findElement(locator).getText();
     }
     public static void selectByValue(By locator, String value) {
         select = new Select(driver.findElement(locator));
@@ -92,12 +82,6 @@ public class BrowserEngine {
     public static void selectByIndex(By locator, int index) {
         select = new Select(driver.findElement(locator));
         select.selectByIndex(index);
-    }
-    public static void submitForm(By locator) {
-        driver.findElement(locator).submit();
-    }
-    public static void uploadFile(By locator, String filePath) {
-        driver.findElement(locator).sendKeys(filePath);
     }
     public static void switchToFrame(By locator) {
         driver.switchTo().frame(driver.findElement(locator));
@@ -149,6 +133,79 @@ public class BrowserEngine {
     }
     public static void addCookie(String name, String value, String path) {
         driver.manage().addCookie(new Cookie(name, value, path));
+    }
+    /**关闭浏览器*/
+    public static void closeCurrentBrowser(WebDriver driver) {
+        driver.close();
+    }
+    /**关闭所有浏览器*/
+    public static void closeAllBrowser(WebDriver driver) {
+        driver.quit();
+    }
+    /**最大化浏览器*/
+    public static void maxBrowser(WebDriver driver) {
+        driver.manage().window().maximize();
+    }
+    /**自定义浏览器尺寸*/
+    public void setBrowserSize(int width, int height) {
+        driver.manage().window().setSize(new Dimension(width, height));
+    }
+    /**获取当前URL*/
+    public static String getURL(WebDriver driver) {
+        return driver.getCurrentUrl();
+    }
+    /**获取当前浏览器页面的标题*/
+    public String getTitle() {
+        return driver.getTitle();
+    }
+    /**在浏览器的历史中向后到上一个页面, 即点击浏览器返回*/
+    public void returnToPreviousPage() {
+        driver.navigate().back();
+    }
+    /**在浏览器的历史中向前到下一个页面, 如果我们在最新的页面上看, 什么也不做, 即点击浏览器下一页*/
+    public void forwardToNextPage() {
+        driver.navigate().forward();
+    }
+
+    /**刷新页面*/
+    public void refreshPage() {
+        driver.navigate().refresh();
+    }
+
+    /**WebDriver切换到当前页面*/
+    public void switchToCurrentPage() {
+        String handle = driver.getWindowHandle();
+        for (String tempHandle : driver.getWindowHandles()) {
+            if(tempHandle.equals(handle)) {
+                driver.close();
+            }else {
+                driver.switchTo().window(tempHandle);
+            }
+        }
+    }
+
+    public void inputText(By locator, String text) {
+        driver.findElement(locator).sendKeys(text);
+    }
+
+    public void clickElement(By locator) {
+        driver.findElement(locator).click();
+    }
+
+    public String getElementText(By locator) {
+        return driver.findElement(locator).getText();
+    }
+
+    public void clearText(By locator) {
+        driver.findElement(locator).clear();
+    }
+
+    public void submitForm(By locator) {
+        driver.findElement(locator).submit();
+    }
+
+    public void uploadFile(By locator, String filePath) {
+        driver.findElement(locator).sendKeys(filePath);
     }
 
 }

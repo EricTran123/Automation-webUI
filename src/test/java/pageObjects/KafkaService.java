@@ -5,10 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import static propertyFiles.Constants.Path_ConfigurationFile;
+
 public class KafkaService {
     private WebElement element = null;
     //指定页面元素定位表达式配置文件的绝对路径
-    private ObjectMap objectMap = new ObjectMap("D:\\Automation\\webUI\\src\\test\\java\\propertyFiles\\ObjectMap.properties");
+    private ObjectMap objectMap = new ObjectMap(Path_ConfigurationFile);
     private WebDriver driver;
     public KafkaService(WebDriver driver){
         this.driver = driver;
@@ -60,9 +62,5 @@ public class KafkaService {
         //调用ObjectMap中的getLocator方法获取配置文件中关于用户名的定位方式和定位表达式
         element = driver.findElement(objectMap.getLocator("paas.kafkaservice.operationmanage"));
         return element;
-    }
-    @Test
-    public void unittestKafkaService(){
-
     }
 }
