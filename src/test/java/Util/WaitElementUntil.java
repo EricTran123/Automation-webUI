@@ -37,12 +37,12 @@ public class WaitElementUntil {
     /**显示等待页面元素出现，参数为页面元素xpath定位表达式*/
     public static void waitWebElementToBePresentInElementValue(WebDriver driver, String xpathExpression, String text){
         WebDriverWait waitElement = new WebDriverWait(driver, 10);
-        waitElement.until(textToBePresentInElementValue(By.xpath(xpathExpression), text));
+        waitElement.until(ExpectedConditions.textToBePresentInElementValue(By.xpath(xpathExpression), text));
     }
     /**显示等待页面标题包含"title"元素出现，参数为页面元素xpath定位表达式*/
     public static void waitWebElementTitleContains(WebDriver driver, String title){
         WebDriverWait waitElement = new WebDriverWait(driver, 10);
-        waitElement.until(titleContains(title));
+        waitElement.until(ExpectedConditions.titleContains(title));
     }
     public static void waitWebElementPresence(WebDriver driver, By by){
         WebDriverWait watiElement = new WebDriverWait(driver, 10);
