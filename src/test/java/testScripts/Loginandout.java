@@ -5,7 +5,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 import org.testng.annotations.*;
 import org.openqa.selenium.*;
 import Util.Log;
-import static Util.KeyActions.*;
+import static Util.KeyActionsUtil.*;
 
 
 public class Loginandout {
@@ -17,7 +17,7 @@ public class Loginandout {
     @Test
     public void testLoginandout() throws Exception {
         driver.get("http://paasweb.tpaas.youedata.com/#/front/login");
-        LoginandoutAction.login(driver, "davieyang","111111");
+        LoginandoutAction.login(driver, "davieyang11","222222");
         assert_String(driver,"退出");
         Log.info("登陆成功");
         LoginandoutAction.logout(driver);

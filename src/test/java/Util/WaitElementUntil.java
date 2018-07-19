@@ -19,11 +19,11 @@ public class WaitElementUntil {
         }
     }
     /**显示等待页面元素出现，参数为页面元素xpath定位表达式*/
-    public static void waitWebElementPresence(WebDriver driver, String xpathExpression){
+    public static void waitWebElement(WebDriver driver, String xpathExpression){
         WebDriverWait waitElement = new WebDriverWait(driver, 10);
         waitElement.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpathExpression)));
     }
-    public static void waitWebElementPresence(WebDriver driver, By by){
+    public static void waitWebElement(WebDriver driver, By by){
         WebDriverWait watiElement = new WebDriverWait(driver, 10);
         watiElement.until(ExpectedConditions.presenceOfElementLocated(by));
     }

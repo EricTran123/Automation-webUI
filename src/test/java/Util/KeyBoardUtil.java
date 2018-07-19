@@ -10,7 +10,7 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.security.Key;
 
-public class KeyBoard {
+public class KeyBoardUtil {
     /**Tab键封装*/
     public static void pressTabKey(){
         Robot robot = null;

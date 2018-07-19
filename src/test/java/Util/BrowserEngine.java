@@ -168,7 +168,7 @@ public class BrowserEngine {
     }
 
     /**刷新页面*/
-    public void refreshPage() {
+    public static void refreshPage() {
         driver.navigate().refresh();
     }
 

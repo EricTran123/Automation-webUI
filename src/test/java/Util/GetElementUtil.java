@@ -1,14 +1,12 @@
 package Util;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import org.openqa.selenium.By;
 
-
-public class ObjectMap {
+public class GetElementUtil {
     private Properties properties;
-    public ObjectMap(String propFile){
+    public GetElementUtil(String propFile){
         properties = new Properties();
         try{
             FileInputStream in = new FileInputStream(propFile);
@@ -52,5 +50,4 @@ public class ObjectMap {
         else
             throw new Exception("输入的locator Type 未在程序中定义：" + locatorType);
     }
-
 }

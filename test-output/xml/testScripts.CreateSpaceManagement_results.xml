@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="5.715">
+           time="19.796">
   <properties />
   
   
-            <testcase name="testLoginandout" time="5.715" classname="testScripts.Loginandout" />
+            <testcase name="testNewSpace" time="19.796" classname="testScripts.CreateSpaceManagement" />
       
 </testsuite>

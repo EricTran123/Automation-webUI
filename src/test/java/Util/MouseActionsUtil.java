@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.WebDriver;
 
-public class MouseAction {
+public class MouseActionsUtil {
     public void lefClick(WebDriver driver, String xpathExpression) {
         Actions actions = new Actions(driver);
         // 鼠标左键在当前停留的位置做单击操作
