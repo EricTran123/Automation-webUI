@@ -8,7 +8,7 @@ import Util.Log;
 import static Util.KeyActionsUtil.*;
 
 
-public class Loginandout {
+public class TestLoginandout {
     private WebDriver driver = BrowserEngine.initBrowser("chrome");
     static {
         //指定log4j配置文件为log4j.xml

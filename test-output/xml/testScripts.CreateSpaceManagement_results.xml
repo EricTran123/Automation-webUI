@@ -8,6 +8,6 @@
   <properties />
   
   
-            <testcase name="testNewSpace" time="19.796" classname="testScripts.CreateSpaceManagement" />
+            <testcase name="testNewSpace" time="19.796" classname="testScripts.TestSpaceManagement" />
       
 </testsuite>

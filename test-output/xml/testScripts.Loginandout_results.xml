@@ -8,6 +8,6 @@
   <properties />
   
   
-            <testcase name="testLoginandout" time="5.715" classname="testScripts.Loginandout" />
+            <testcase name="testLoginandout" time="5.715" classname="testScripts.TestLoginandout" />
       
 </testsuite>

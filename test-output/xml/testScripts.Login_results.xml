@@ -6,7 +6,7 @@
            skipped="0"
            time="0.320">
   <properties />
-            <testcase name="testLogin" time="0.320" classname="testScripts.Loginandout">
+            <testcase name="testLogin" time="0.320" classname="testScripts.TestLoginandout">
                 <failure type="org.openqa.selenium.NoSuchElementException"
                   message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/section/section/main/div/form/div[1]/div/div/input&quot;}
   (Session info: chrome=67.0.3396.62)
@@ -47,7 +47,7 @@ Session ID: f5524be58bd9867e082a0df48d088474
   org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
   org.openqa.selenium.By$ByXPath.findElement(By.java:353)
   org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
-  testScripts.Loginandout.testLogin(Login.java:16)
+  testScripts.TestLoginandout.testLogin(Login.java:16)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

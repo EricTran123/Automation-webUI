@@ -1,4 +1,4 @@
-package testScripts;
+package Util;
 import Util.BrowserEngine;
 import Util.ScrollBar;
 import org.openqa.selenium.By;

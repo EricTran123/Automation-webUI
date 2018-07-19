@@ -90,6 +90,17 @@ public class KeyActionsUtil {
             System.out.println("断言失败");
         }
     }
+    //断言文字不存在
+    public static void assert_NoString(WebDriver driver, String assertstring){
+        try{
+            Assert.assertFalse(driver.getPageSource().contains(assertstring)); 
+            Log.info("成功断言关键字“"+ assertstring +"” + “不存在”");
+        }catch (AssertionError e){
+            Log.info("断言失败，具体信息为：" + e.getMessage());
+            System.out.println("断言失败");
+        }
+    }
+
     //关闭浏览器
     public static void close_Browser(WebDriver driver){
         try{
