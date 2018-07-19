@@ -71,16 +71,16 @@ public class BrowserEngine {
     public static String getURL() {
         return driver.getCurrentUrl();
     }
-    public static void selectByValue(By locator, String value) {
-        select = new Select(driver.findElement(locator));
+    public static void selectByValue(String string, String value) {
+        select = new Select(driver.findElement(By.xpath(string)));
         select.selectByValue(value);
     }
-    public static void selectByText(By locator, String text) {
-        select = new Select(driver.findElement(locator));
+    public static void selectByText(String string, String text) {
+        select = new Select(driver.findElement(By.xpath(string)));
         select.selectByVisibleText(text);
     }
-    public static void selectByIndex(By locator, int index) {
-        select = new Select(driver.findElement(locator));
+    public static void selectByIndex(String string, int index) {
+        select = new Select(driver.findElement(By.xpath(string)));
         select.selectByIndex(index);
     }
     public static void switchToFrame(By locator) {

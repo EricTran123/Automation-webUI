@@ -3,10 +3,9 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="D:/Automation/webUI/src/test/java/testScripts">
         <classes>
-            <class name="testScripts.TestSpaceManagement">
+            <class name="testScripts.TestMysqlService">
                 <methods>
-                    <include name="testNewSpace"/>
-                    <include name="testDeleteSpace"/>
+                    <include name="testCreateMysqlService"/>
                 </methods>
             </class>
         </classes>

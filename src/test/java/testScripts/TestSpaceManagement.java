@@ -8,10 +8,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import pageObjects.SpaceManagement;
-
-import static Util.BrowserEngine.acceptAlert;
 import static Util.KeyActionsUtil.*;
-import static Util.KeyBoardUtil.pressEnterKey;
 import static appModules.SpaceManagementAction.linkToSpaceManagementPage;
 import static propertyFiles.Constants.LoginPage;
 
