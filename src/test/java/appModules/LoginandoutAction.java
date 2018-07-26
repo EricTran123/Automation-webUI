@@ -23,7 +23,7 @@ public class LoginandoutAction {
         Log.info("输入密码....");
         loginPage.loginButton().click();
         Log.info("点击登陆....");
-        KeyActionsUtil.sleep("1000");
+        KeyActionsUtil.sleep("2000");
     }
     public static void logout(WebDriver driver) throws Exception{
         LoginPage loginPage = new LoginPage(driver);

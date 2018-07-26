@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="D:/Automation/webUI/src/test/java/testScripts"
-           tests="2"
+           tests="3"
            failures="0"
            errors="0"
            skipped="0"
-           time="23.265">
+           time="29.242">
   <properties />
   
   
-            <testcase name="testNewSpace" time="19.111" classname="testScripts.TestSpaceManagement" />
-                <testcase name="testDeleteSpace" time="4.154" classname="testScripts.TestSpaceManagement" />
+            <testcase name="testNewSpace" time="21.312" classname="testScripts.TestSpaceManagement" />
+                <testcase name="testDeleteSpace" time="4.174" classname="testScripts.TestSpaceManagement" />
+                <testcase name="testModifySpace" time="3.756" classname="testScripts.TestSpaceManagement" />
       
 </testsuite>

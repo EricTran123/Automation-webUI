@@ -23,7 +23,7 @@ public class TestSpaceManagement {
     @Test
     public void testNewSpace()throws Exception{
         driver.get(LoginPage);
-        LoginandoutAction.login(driver, "davieyang11","222222");
+        LoginandoutAction.login(driver, "davieyang11","111111");
         assert_String(driver,"退出");
         Log.info("登陆成功...");
         linkToSpaceManagementPage(driver);
@@ -50,6 +50,15 @@ public class TestSpaceManagement {
         sleep("2000");
         assert_NoString(driver,"testspace");
         Log.info("断言页面不存在该空间");
+    }
+    @Test
+    public void testModifySpace() throws Exception{
+        spaceManagement.extendbutton().click();
+        Log.info("点击配置空间按钮...");
+        sleep("2000");
+        spaceManagement.mem().sendKeys("10");
+        spaceManagement.cpu().sendKeys("5");
+        spaceManagement.savebutton().click();
         close_Browser(driver);
         Log.info("关闭浏览器...");
     }
