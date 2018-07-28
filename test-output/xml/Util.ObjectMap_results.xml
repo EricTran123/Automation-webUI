@@ -6,12 +6,12 @@
            skipped="0"
            time="0.020">
   <properties />
-            <testcase name="testGetElement" time="0.020" classname="Util.GetElementUtil">
+            <testcase name="testGetElement" time="0.020" classname="Util.GetElements">
                 <failure type="java.lang.NullPointerException"
                   message="(null)"
               >
 <![CDATA[java.lang.NullPointerException
-  Util.GetElementUtil.testGetElement(ObjectMap.java:65)
+  Util.GetElements.testGetElement(ObjectMap.java:65)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

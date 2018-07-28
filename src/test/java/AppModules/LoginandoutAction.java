@@ -1,10 +1,10 @@
-package appModules;
+package AppModules;
 
 import Util.BrowserEngine;
 import Util.Log;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
-import pageObjects.LoginPage;
+import PageObjects.LoginPage;
 import Util.KeyActionsUtil;
 
 

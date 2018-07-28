@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import static propertyFiles.Constants.Path_BrowserDrivers;
+import static PropertyFiles.Constants.Path_BrowserDrivers;
 
 public class BrowserEngine {
     private static WebDriver driver = null;

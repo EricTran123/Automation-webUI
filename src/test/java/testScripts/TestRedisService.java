@@ -6,7 +6,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import pageObjects.RedisService;
+import PageObjects.RedisService;
 
 public class TestRedisService {
     private WebDriver driver = BrowserEngine.initBrowser("chrome");

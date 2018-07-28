@@ -1,77 +1,77 @@
-package pageObjects;
+package PageObjects;
 
-import Util.GetElementUtil;
+import Util.GetElements;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import static propertyFiles.Constants.Path_ConfigurationFile;
+import static PropertyFiles.Constants.Path_ConfigurationFile;
 
-public class MongoDBService {
+public class RedisService {
     private WebElement element = null;
     //指定页面元素定位表达式配置文件的绝对路径
-    private GetElementUtil getElementUtil = new GetElementUtil(Path_ConfigurationFile);
+    private GetElements getElements = new GetElements(Path_ConfigurationFile);
     private WebDriver driver;
-    public MongoDBService(WebDriver driver){
+    public RedisService(WebDriver driver){
         this.driver = driver;
     }
-    //返回MongoDB数据库服务页面“刷新”按钮的页面元素对象
+    //返回Redis数据库服务页面“刷新”按钮的页面元素对象
     public WebElement refreshbutton() throws Exception{
         //调用ObjectMap中的getLocator方法获取配置文件中关于用户名的定位方式和定位表达式
-        element = driver.findElement(getElementUtil.getLocator("paas.mongodb.refreshbutton"));
+        element = driver.findElement(getElements.getLocator("paas.redis.refreshbutton"));
         return element;
     }
-    //返回MongoDB数据库服务页面“创建实例”按钮的页面元素对象
+    //返回Redis数据库服务页面“创建实例”按钮的页面元素对象
     public WebElement newinstance() throws Exception{
         //调用ObjectMap中的getLocator方法获取配置文件中关于用户名的定位方式和定位表达式
-        element = driver.findElement(getElementUtil.getLocator("paas.mongodb.newinstance"));
+        element = driver.findElement(getElements.getLocator("paas.redis.newinstance"));
         return element;
     }
-    //返回MongoDB数据库服务页面MongoDB名称检索控件的页面元素对象
+    //返回Redis数据库服务页面Redis名称检索控件的页面元素对象
     public WebElement searchinstancename() throws Exception{
         //调用ObjectMap中的getLocator方法获取配置文件中关于用户名的定位方式和定位表达式
-        element = driver.findElement(getElementUtil.getLocator("paas.mongodb.searchinstancename"));
+        element = driver.findElement(getElements.getLocator("paas.redis.searchinstancename"));
         return element;
     }
-    //返回MongoDB数据库服务页面运行空间检索控件页面元素对象
+    //返回Redis数据库服务页面运行空间检索控件页面元素对象
     public WebElement searchspacename() throws Exception{
         //调用ObjectMap中的getLocator方法获取配置文件中关于用户名的定位方式和定位表达式
-        element = driver.findElement(getElementUtil.getLocator("paas.mongodb.searchspacename"));
+        element = driver.findElement(getElements.getLocator("paas.redis.searchspacename"));
         return element;
     }
-    //返回MongoDB数据库服务页面操作列“。。。”按钮的页面元素对象
+    //返回Redis数据库服务页面操作列“。。。”按钮的页面元素对象
     public WebElement operation() throws Exception{
         //调用ObjectMap中的getLocator方法获取配置文件中关于用户名的定位方式和定位表达式
-        element = driver.findElement(getElementUtil.getLocator("paas.mongodb.operation"));
+        element = driver.findElement(getElements.getLocator("paas.redis.operation"));
         return element;
     }
-    //返回MongoDB数据库服务页面操作列“。。。”里下拉列表里的“重启”按钮的页面元素对象
+    //返回Redis数据库服务页面操作列“。。。”里下拉列表里的“重启”按钮的页面元素对象
     public WebElement operationrestart() throws Exception{
         //调用ObjectMap中的getLocator方法获取配置文件中关于用户名的定位方式和定位表达式
-        element = driver.findElement(getElementUtil.getLocator("paas.mongodb.operationrestart"));
+        element = driver.findElement(getElements.getLocator("paas.redis.operationrestart"));
         return element;
     }
-    //返回MongoDB数据库服务页面操作列“。。。”里下拉列表里的“释放”按钮的页面元素对象
+    //返回Redis数据库服务页面操作列“。。。”里下拉列表里的“释放”按钮的页面元素对象
     public WebElement operationrelease() throws Exception{
         //调用ObjectMap中的getLocator方法获取配置文件中关于用户名的定位方式和定位表达式
-        element = driver.findElement(getElementUtil.getLocator("paas.mongodb.operationrelease"));
+        element = driver.findElement(getElements.getLocator("paas.redis.operationrelease"));
         return element;
     }
-    //返回MongoDB数据库服务页面操作列“。。。”里下拉列表里的“管理”按钮的页面元素对象
+    //返回Redis数据库服务页面操作列“。。。”里下拉列表里的“管理”按钮的页面元素对象
     public WebElement operationmanage() throws Exception{
         //调用ObjectMap中的getLocator方法获取配置文件中关于用户名的定位方式和定位表达式
-        element = driver.findElement(getElementUtil.getLocator("paas.mongodb.operationmanage"));
+        element = driver.findElement(getElements.getLocator("paas.redis.operationmanage"));
         return element;
     }
-    //返回MongoDB数据库服务页面操作列“。。。”里下拉列表里的“日志”按钮的页面元素对象
+    //返回Redis数据库服务页面操作列“。。。”里下拉列表里的“日志”按钮的页面元素对象
     public WebElement operationlog() throws Exception{
         //调用ObjectMap中的getLocator方法获取配置文件中关于用户名的定位方式和定位表达式
-        element = driver.findElement(getElementUtil.getLocator("paas.mongodb.operationlog"));
+        element = driver.findElement(getElements.getLocator("paas.redis.operationlog"));
         return element;
     }
-    //返回MongoDB数据库服务页面操作列“。。。”里下拉列表里的“监控”按钮的页面元素对象
+    //返回Redis数据库服务页面操作列“。。。”里下拉列表里的“监控”按钮的页面元素对象
     public WebElement operationmonitor() throws Exception{
         //调用ObjectMap中的getLocator方法获取配置文件中关于用户名的定位方式和定位表达式
-        element = driver.findElement(getElementUtil.getLocator("paas.mongodb.operationmonitor"));
+        element = driver.findElement(getElements.getLocator("paas.redis.operationmonitor"));
         return element;
     }
 }

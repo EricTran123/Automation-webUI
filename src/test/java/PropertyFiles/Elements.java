@@ -1,4 +1,4 @@
-package propertyFiles;
+package PropertyFiles;
 
 public class Elements {
     public static final String paas_landPage_controller = "//*[@id='app']/section/header/div[1]/div[2]/p/span[1]";

@@ -1,6 +1,6 @@
 package testScripts;
 import Util.BrowserEngine;
-import appModules.LoginandoutAction;
+import AppModules.LoginandoutAction;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.testng.annotations.*;
 import org.openqa.selenium.*;

@@ -1,4 +1,4 @@
-package appModules;
+package AppModules;
 
 public class MysqlServiceAction {
 }
