@@ -1,9 +1,9 @@
-package appModules;
+package AppModules;
 
 import Util.Log;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
-import static propertyFiles.Constants.Spacemanagement_Main;
+import static PropertyFiles.Constants.Spacemanagement_Main;
 
 
 public class SpaceManagementAction {

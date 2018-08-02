@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.util.Properties;
 import org.openqa.selenium.By;
 
-public class GetElementUtil {
+public class GetElements {
     private Properties properties;
-    public GetElementUtil(String propFile){
+    public GetElements(String propFile){
         properties = new Properties();
         try{
             FileInputStream in = new FileInputStream(propFile);

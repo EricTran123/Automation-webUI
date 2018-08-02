@@ -1,5 +1,5 @@
 package Util;
-import propertyFiles.Constants;
+import PropertyFiles.Constants;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;

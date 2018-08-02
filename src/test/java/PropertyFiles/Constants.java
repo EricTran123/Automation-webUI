@@ -1,8 +1,8 @@
-package propertyFiles;
+package PropertyFiles;
 
 public class Constants {
-        public static final String Path_ConfigurationFile = "D:\\webtest\\src\\test\\java\\propertyFiles\\ObjectMap.properties";
-        public static final String Path_BrowserDrivers = "D:\\webtest\\src\\test\\java\\BrowserDrivers\\";
+        public static final String Path_ConfigurationFile = "D:\\Automation\\webUI\\src\\test\\java\\PropertyFiles\\ObjectMap.properties";
+        public static final String Path_BrowserDrivers = "D:\\KeyWordFrameWork\\FrameWork\\src\\test\\java\\BrowserDrivers\\";
         public static final String LoginPage = "http://paasweb.tpaas.youedata.com/#/front/login";
         public static final String Database_Main= "http://paasweb.tpaas.youedata.com/#/front/databaseServicePage/main";
         public static final String Spacemanagement_Main = "http://paasweb.tpaas.youedata.com/#/front/spaceManage/main";

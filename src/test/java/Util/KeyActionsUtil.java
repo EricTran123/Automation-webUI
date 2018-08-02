@@ -1,7 +1,7 @@
 package Util;
 import static Util.WaitElementUntil.waitWebElement;
-import static propertyFiles.Constants.Path_BrowserDrivers;
-import static propertyFiles.Constants.Path_ConfigurationFile;
+import static PropertyFiles.Constants.Path_BrowserDrivers;
+import static PropertyFiles.Constants.Path_ConfigurationFile;
 import java.util.List;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
@@ -16,7 +16,7 @@ public class KeyActionsUtil {
     //声明静态的Webdriver对象，用于在此类中相关Driver的操作
     public static WebDriver driver;
     //声明存储定位表达式配置文件的ObjectMap对象
-    private static GetElementUtil getElementUtil = new GetElementUtil(Path_ConfigurationFile);
+    private static GetElements getElements = new GetElements(Path_ConfigurationFile);
     static {
         //指定log4j配置文件为log4j.xml
         DOMConfigurator.configure("log4j.xml");
@@ -45,7 +45,7 @@ public class KeyActionsUtil {
     }
     //用于显示等待页面元素的出现
     public static void WaitFor_Element(String xpathExpression) throws Exception {
-        By by = getElementUtil.getLocator(xpathExpression);
+        By by = getElements.getLocator(xpathExpression);
         try{
             waitWebElement(driver, by);
             Log.info("显示等待页面元素出现成功， 页面元素是" + xpathExpression);
@@ -65,7 +65,7 @@ public class KeyActionsUtil {
     //页面上不止一个相同功能并且xpath相同的元素，此种情况处理是将他们存储到List中，然后用索引的方式用其一
     public static void twoWay(String ElementNameInproFile){
         try {
-            List<WebElement> elements = driver.findElements(getElementUtil.getLocator(ElementNameInproFile));
+            List<WebElement> elements = driver.findElements(getElements.getLocator(ElementNameInproFile));
             elements.get(0).click();
             System.out.println("按钮被成功点击");
         }catch (Exception e){

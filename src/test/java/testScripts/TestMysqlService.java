@@ -3,20 +3,20 @@ package testScripts;
 import Util.BrowserEngine;
 import Util.Log;
 import Util.ScrollBar;
-import appModules.LoginandoutAction;
+import AppModules.LoginandoutAction;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import pageObjects.DatabaseManagement;
-import pageObjects.MySQLService;
+import PageObjects.DatabaseManagement;
+import PageObjects.MySQLService;
 
 import static Util.KeyActionsUtil.assert_String;
 import static Util.KeyActionsUtil.sleep;
 import static Util.WaitElementUntil.sleep;
-import static propertyFiles.Constants.Database_Main;
-import static propertyFiles.Constants.LoginPage;
+import static PropertyFiles.Constants.Database_Main;
+import static PropertyFiles.Constants.LoginPage;
 
 public class TestMysqlService {
     private WebDriver driver = BrowserEngine.initBrowser("chrome");

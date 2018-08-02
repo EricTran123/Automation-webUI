@@ -6,7 +6,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import pageObjects.ElasticSearchService;
+import PageObjects.ElasticSearchService;
 
 public class TestElasticSearchService {
     private WebDriver driver = BrowserEngine.initBrowser("chrome");

@@ -2,19 +2,19 @@ package testScripts;
 
 import Util.BrowserEngine;
 import Util.Log;
-import appModules.LoginandoutAction;
+import AppModules.LoginandoutAction;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import pageObjects.SpaceManagement;
+import PageObjects.SpaceManagement;
 import static Util.KeyActionsUtil.*;
-import static appModules.SpaceManagementAction.linkToSpaceManagementPage;
-import static propertyFiles.Constants.LoginPage;
+import static AppModules.SpaceManagementAction.linkToSpaceManagementPage;
+import static PropertyFiles.Constants.LoginPage;
 
 public class TestSpaceManagement {
     private WebDriver driver = BrowserEngine.initBrowser("chrome");
-    SpaceManagement spaceManagement = new pageObjects.SpaceManagement(driver);
+    SpaceManagement spaceManagement = new PageObjects.SpaceManagement(driver);
     static {
         //指定log4j配置文件为log4j.xml
         DOMConfigurator.configure("log4j.xml");
